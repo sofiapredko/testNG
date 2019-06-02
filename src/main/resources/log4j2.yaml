@@ -10,6 +10,12 @@ configuration:
       name: Console_Appender
       PatternLayout:
         Pattern: "%highlight{%-5level}{FATAL=bg_red} %style{%date{yyyy-MM-dd HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
+    File:
+      name: File_Appender
+      fileName: logs/Reporter.log
+      PatternLayout:
+        Pattern: "%highlight{%-5level} %style{%date{yyyy-MM-dd
+                        HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
 
   Loggers:
     Root:
@@ -17,3 +23,4 @@ configuration:
       AppenderRef:
         - ref: Console_Appender
           level: all
+
